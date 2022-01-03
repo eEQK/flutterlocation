@@ -298,7 +298,7 @@
         return;
     }
     NSLog(@"currentLocation is %@", latestLocation);
-
+    NSTimeInterval timeInSeconds = [latestLocation.timestamp timeIntervalSince1970];
     BOOL superiorToIos10 = [UIDevice currentDevice].systemVersion.floatValue >= 10;
     NSDictionary<NSString*,NSNumber*>* coordinatesDict =
     @{
